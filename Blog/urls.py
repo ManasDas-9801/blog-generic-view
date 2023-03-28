@@ -9,6 +9,7 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', PostView.as_view(), name="index"),
+    path('category/<id>/', search, name="category_search"),
     path('insert/', PostCreateView.as_view(), name="insert"),
 
 ]
